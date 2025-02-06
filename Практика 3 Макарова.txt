@@ -1,0 +1,214 @@
+Практика 3 Макарова
+
+1)
+
+fun main() {
+  println("Введите три числа:")
+  val a = readLine()!!.toInt()
+  val b = readLine()!!.toInt()
+  val c = readLine()!!.toInt()
+  val maxN = maxOf(a, b, c)
+  println("Максимальное число: $maxN") }
+
+2)
+
+fun main() {
+  println("Напишите три числа:")
+  val a = readln().toInt()
+  val b = readln().toInt()
+  val c = readln().toInt()
+  if (a == b || b == c || a == c)
+  { println("Ошибка") }
+   else {
+    val average = (a + b + c) / 3.0
+    println("Среднее значение: $average") }
+  }
+
+3)
+
+fun main() {
+  println("Введите два числа с разной четностью:")
+  val x = readLine()!!.toInt()
+  val y = readLine()!!.toInt()
+  if ((x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0)) {
+    val s = if (x % 2 != 0) x else y
+    println("Нечетное число: $s")
+  } else {
+    println("Числа должны быть с разной четностью.")
+  }
+  }
+
+4)
+
+fun main() {
+  println("Введите большее и меньшее число:")
+  val g = readLine()!!.toInt()
+  val h = readLine()!!.toInt()
+  if (g % h == 0) {
+    println("$g кратно $h")
+  } else {
+    val j = g % h
+    println("$g не кратно $h, остаток: $j")
+  }
+}
+
+5)
+
+fun main() {
+  println("Введите длины трех сторон треугольника:")
+  val s1 = readLine()!!.toInt()
+  val s2 = readLine()!!.toInt()
+  val s3 = readLine()!!.toInt()
+  if (s1 + s2 > s3 && s1 + s3 > s2 && s2 + s3 > s1) {
+    println("Треугольник может существовать.")
+  } else {
+    println("Треугольник не может существовать.")
+  }
+}
+
+6)
+
+fun main() {
+  println("Введите год:")
+  val a = readLine()!!.toInt()
+  val s = (a % 4 == 0 && a % 100 != 0) || (a % 400 == 0)
+  if (s) {
+    println("$a - високосный год, в году 366 дней.")
+  } else {
+    println("$a - невисокосный год, в году 365 дней.")
+  }
+}
+
+7)
+
+fun main() {
+  println("Введите два различных вещественных числа:")
+  val n1 = readLine()!!.toDouble()
+  val n2 = readLine()!!.toDouble()
+  println("Большее число: ${maxOf(n1, n2)}")
+  println("Меньшее число: ${minOf(n1, n2)}")
+}
+
+8)
+
+fun main() {
+  println("Введите расстояние в километрах:")
+  val k = readLine()!!.toDouble()
+  println("Введите расстояние в футах:")
+  val f = readLine()!!.toDouble()
+  val d = f * 0.305
+  if (k < d) {
+    println("Расстояние в километрах меньше расстояния в футах.")
+  } else {
+    println("Расстояние в футах меньше расстояния в километрах.")
+  }
+}
+
+
+9)
+
+fun main() {
+  println("Введите два целых числа m и n:")
+  val m = readLine()!!.toInt()
+  val n = readLine()!!.toInt()
+  if (m % n == 0) {
+    println("m / n = ${m / n}")
+  } else {
+    println("m на n нацело не делится")
+  }
+}
+
+
+10)
+
+fun main() {
+  println("Введите два числа a и b:")
+  val a = readLine()!!.toInt()
+  val b = readLine()!!.toInt()
+  if (b % a == 0) {
+    println("$a является делителем $b")
+  } else {
+    println("$a не является делителем $b")
+  }
+}
+
+11)
+
+fun main() {
+  println("Введите натуральное число:")
+  val a = readLine()!!.toInt()
+  println(if (a % 2 == 0) "$a - четное число" else "$a - нечетное число")
+  println(if (a % 10 == 7) "$a оканчивается на 7" else "$a не оканчивается на 7")
+}
+
+12)
+
+fun main() {
+  println("Введите двузначное число:")
+  val a = readLine()!!.toInt()
+  val s = a / 10
+  val d = a % 10
+  if (s > d) {
+    println("Первая цифра больше второй.")
+  } else if (s < d) {
+    println("Вторая цифра больше первой.")
+  } else {
+    println("Цифры одинаковы.")
+  }
+}
+
+13)
+
+fun main() {
+  println("Введите четырехзначное число:")
+  val a = readLine()!!.toInt()
+  val d1 = a / 1000
+  val d2 = (a / 100) % 10
+  val d3 = (a / 10) % 10
+  val d4 = a % 10
+
+  val sumF = d1 + d2
+  val sumL = d3 + d4
+  if (sumF == sumL) {
+    println("Сумма двух первых цифр равна сумме двух последних.")
+  } else {
+    println("Сумма двух первых цифр не равна сумме двух последних.")
+  }
+
+  val sumD = d1 + d2 + d3 + d4
+  if (sumD % 3 == 0) {
+    println("Сумма цифр кратна трем.")
+  } else {
+    println("Сумма цифр не кратна трем.")
+  }
+
+  val prD = d1 * d2 * d3 * d4
+  if (prD % 4 == 0) {
+    println("Произведение цифр кратно четырем.")
+  } else {
+    println("Произведение цифр не кратно четырем.")
+  }
+
+  // Ввод числа 'a' для последнего условия
+  println("Введите число a:")
+  val aC = readLine()!!.toInt()
+  if (prD % aC == 0) {
+    println("Произведение цифр кратно $aC.")
+  } else {
+    println("Произведение цифр не кратно $aC.")
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

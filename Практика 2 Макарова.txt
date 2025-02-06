@@ -1,0 +1,159 @@
+Практика 2 Макарова
+
+Операции с числами:
+1)
+
+fun main() {
+  val a = readln().toInt()
+  val tens = a  / 10
+  val units = a % 10
+  val sum = tens + units
+  val product = tens * units
+  println("Двузначное число: $a")
+  println("Число десятка: $tens")
+  println("Число единицы: $units")
+  println("Сумма цифр: $sum")
+  println("Произведение цифр: $product")
+}
+
+2)
+
+fun main() {
+  val a = readln().toInt()
+  val s3 = a / 100
+  val tens = (a / 10) % 10
+  val units = a % 10
+  val sum = s3 + tens + units
+  val product = s3 * tens * units
+  println("Трехзначное число: $a")
+  println("Число единиц: $units")
+  println("Число десятков: $tens")
+  println("Сумма цифр: $sum")
+  println("Произведение цифр: $product")
+}
+
+
+3)
+
+fun main() {
+  val a = readln().toDouble()
+  val d = readln().toDouble()
+
+  if (d != 0.0) {
+    val result = a / d
+    println("Результат деления $a на $d: $result")
+  } else {
+    println("Ошибка: деление на ноль!")
+  }
+}
+
+4)
+
+fun main() {
+  println("Напишите число")
+  val a = readln().toDouble()
+  println("Напишите степень")
+  val s = readln().toDouble()
+  val d = Math.pow(a, s)
+  println("$a в степени $s равно $d")
+}
+
+5)
+
+fun main() {
+  println("Напишите число")
+  val a = readln().toDouble()
+  if (a >= 0) {
+    val s = Math.sqrt(a)
+    println("Корень числа $a равен $s")
+  } else {
+    println("Ошибка: нельзя извлечь корень из отрицательного числа!")
+  }
+}
+
+Вычисление логических выражений:
+
+1)
+
+fun main() {
+  val A = true
+  val B = false
+  val C = false
+  println("A или B: ${A || B}")
+  println("A и B: ${A && B}")
+  println("B или C: ${B || C}")
+}
+
+2)
+
+fun main() {
+    val X = false
+    val Y = true
+    val Z = false
+    println("X или Z: ${X || Z}")
+    println("X и Y: ${X && Y}")
+    println("X и Z: ${X && Z}")
+}
+
+3)
+
+fun main() {
+    val A = true
+    val B = false
+    val C = false
+    println("не A и B: ${!A && B}")
+    println("A или не B: ${A || !B}")
+    println("A и B или C: ${A && B || C}")
+}
+
+4 и 5)
+
+fun main() {
+    val X = true
+    val Y = true
+    val Z = false
+    println("не X и Y: ${!X && Y}")
+    println("X или не Y: ${X || !Y}")
+    println("X или Y и Z: ${X || (Y && Z)}")
+}
+
+6)
+
+fun main() {
+    val X = false
+    val Y = false
+    val Z = true
+    println("X или Y и не Z: ${X || (Y && !Z)}")
+    println("X и не Y или Z: ${X && !Y || Z}")
+    println("не X и не Y: ${!X && !Y}")
+    println("X и (не Y или Z): ${X && (!Y || Z)}")
+    println("не (X и Z) или Y: ${!(X && Z) || Y}")
+    println("X или (не (Y или Z)): ${X || !(Y || Z)}")
+}
+
+7)
+
+fun main() {
+    val A = true
+    val B = false
+    val C = false
+    println("A или не (A и B) или C: ${A || !(A && B) || C}")
+    println("не A или A и (B или C): ${!A || (A && (B || C))}")
+    println("(A или B и не C) и C: ${(A || (B && !C)) && C}")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
