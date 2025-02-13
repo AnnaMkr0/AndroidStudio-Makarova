@@ -1,0 +1,171 @@
+Практика 4 Макарова:
+
+1)
+
+fun main() {
+    val number = readln().toInt()
+    val day = when (number) {
+      1 -> "Понедельник"
+      2 -> "Вторник"
+      3 -> "Среда"
+      4 -> "Четверг"
+      5 -> "Пятница"
+      6 -> "Суббота"
+      7 -> "Воскресенье"
+      else -> "Некорректный номер дня"
+    }
+    println(day)
+}
+
+2)
+
+fun main() {
+  val a = readln().toDouble()
+  val b = readln().toDouble()
+  val c = readln().toDouble()
+    val type = when {
+      a == b && b == c -> "Равносторонний"
+      a == b || b == c || a == c -> "Равнобедренный"
+      else -> "Разносторонний"
+    }
+    println(type)
+}
+
+3)
+
+fun main() {
+  val a = readln().toInt()
+    val grade = when  {
+      a in 90..100 -> "5"
+      a in 80..89 -> "4"
+      a in 70..79 -> "3"
+      a in 60..69 -> "2"
+      else -> "Некорректное значение"
+    }
+    println(grade)
+  }
+
+4)
+
+fun main() {
+   val t = readln().toInt()
+    val time = when {
+      t in 0..5 -> "Ночь"
+      t in 6..11 -> "Утро"
+      t in 12..17 -> "День"
+      t in 18..23 -> "Вечер"
+      else -> "Некорректный час"
+    }
+    println(time)
+}
+
+5)
+
+fun main() {
+  val number = readln().toInt()
+    val sign = when {
+      number > 0 -> "Положительное"
+      number < 0 -> "Отрицательное"
+      else -> "Ноль"
+    }
+    println(sign)
+}
+
+6)
+
+fun main() {
+  println("Введите загадываемое число:")
+  val u = readln().toDouble()
+  println("Введите отгадываемое число:")
+  val a = readln().toDouble()
+    when {
+      a < u -> println("Слишком низкое число")
+      a > u -> println("Слишком высокое число")
+      else -> println("Вы угадали!")
+    }
+}
+
+7 и 9)
+
+fun main() {
+  val a = readln().toInt()
+    val length = when {
+      a==0 -> "Пустая строка"
+      a in 1..10 -> "Короткая строка"
+      a in 11..20 -> "Средняя строка"
+      else -> "Длинная строка"
+    }
+    println(length)
+  }
+
+8)
+
+fun main() {
+  val a = readln().toString()
+    val time = when  {
+      a=="Мясо" -> "1-2 часа"
+      a=="Рыба" -> "30-40 минут"
+      a=="Овощи" -> "15-30 минут"
+      else -> "Неизвестный тип пищи"
+    }
+    println(time)
+}
+
+10)
+
+fun main() {
+  val a = readln().toString()
+    val message = when  {
+      a=="Наличные" -> "Оплата наличными"
+      a=="Кредитная карта" -> "Оплата кредитной картой"
+      a=="PayPal" -> "Оплата через PayPal"
+      else -> "Некорректный способ оплаты"
+    }
+    println(message)
+  }
+
+11)
+
+fun main() {
+  val a = readln().toString()
+    val compatibleGroups = when {
+      a=="A" -> "A, O"
+      a=="B" -> "B, O"
+      a=="AB" -> "A, B, AB, O"
+      a=="O" -> "O"
+      else -> "Некорректная группа крови"
+    }
+    println("Совместимые группы крови: $compatibleGroups")
+  }
+
+12)
+
+fun main() {
+  val a = readln().toString()
+    val nation = when  {
+      a=="США" -> "Американец"
+      a=="Россия" -> "Русский"
+      a=="Япония" -> "Японец"
+      else -> "Неизвестная национальность"
+    }
+    println(nation)
+  }
+
+13)
+
+fun main() {
+  val a = readln().toInt()
+    val message = when  {
+      a==100 -> "Ошибка сети"
+      a==200 -> "Ошибка сервера"
+      else -> "Неизвестный код ошибки"
+    }
+    println(message)
+}
+
+
+
+
+
+
+
